@@ -27,7 +27,10 @@ def main():
     by_timestamp = {}
     for ref in iter_files(base_dir):
         for line in open(os.path.join(base_dir, ref)).readlines():
-            [details, action] = line.strip().split('\t')
+            parts = line.strip().split('\t')
+            if len(parts) != 2:
+                continue
+            [details, action] = parts
             details = details.split(' ')
             ts = int(details[-2], 10)
             if ts not in by_timestamp:
