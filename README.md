@@ -23,3 +23,6 @@ Fetch from origin 1 hour ago:
  * [new branch]                   shawn/review/work -> origin/shawn/review/work
  + 1299a6453dda...51ce2cd9f67d    shawn/review/otherwork -> origin/shawn/review/otherwork  (forced update)
 ```
+
+*limitation*: deleted refs are absent from the summaries, because
+their corresponding reflogs were deleted.
